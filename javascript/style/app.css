@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+ 	font-family: "Lato", sans-serif;
+}
+
+body{
+	padding-top:50px;
+	background:#D6D6D6;
+}
+
+.navbar{
+	z-index: 999;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:50px;
+	background:#1313BF;
+}
+
+.navbar .navbar-center{
+	height:50px;
+	display: flex;
+	align-items: center;
+	padding:0 10%;
+}
+.navbar-center .navbar-brands{
+	/*height:100%;*/
+	width:200px;
+	border:1px solid red;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-brands .navbar-logo{
+	height: 40px;
+	border-radius:5px;
+	width:40px;
+	background:white;
+		transition:0.2s;
+}
+.navbar-brands h1{
+	color:white;
+	padding: 0 10px;
+	cursor: default
+}
+.navbar-brands:hover .navbar-logo{
+	transition:0.2s;
+	transform: rotate(20deg);
+}
+.navbar-center .navbar-links{
+	margin-left: 10%;
+	width:60%;
+}
+.navbar-links ul{
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+.navbar-links ul li{
+	list-style: none;
+	height:40px;
+	display: flex;
+	align-items: center;
+}
+.navbar-links ul li a{
+	text-decoration: none;
+	color:white;
+	padding:10px;
+}
+
+.navbar-right{
+	/*height:100%;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:10%;
+}
+.navbar-right button{
+	cursor: pointer;
+	color:#1313BF;
+	outline:none;
+	border:none;
+	width:100%;
+	height:30px;
+	border-radius:10px;
+		transition: 0.4s;
+}
+.navbar-right button:hover{
+	border-radius:15px;
+	transition: 0.4s;
+}
+
+
+
+/*Header*/
+header{
+	width:100%;
+	height:200px;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	background:#0A0A6C;
+}
+
+header h1{
+	color:white;
+}
+
+.form{
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:50px;
+}
+.form input{
+	height:40px;
+	border:none;
+	padding: 0 10px;
+	outline:none;
+	border-radius:10px;
+	width: 50%;
+		transition: 0.2s;
+	margin-right: 10px;
+}
+.form input:focus{
+	transition: 0.2s;
+	border:1px solid #1313BF;
+}
+.form button{
+	cursor:pointer;
+	color:white;
+	background:#1313BF;
+	height:40px;
+	outline:none;
+	border:none;
+	width:100px;
+	border-radius:10px;
+	position: relative;
+	top:0;
+	transition: 0.2s;
+}
+.form button:hover{
+	transition:0.1s;
+	top:-4px;
+	position: relative;
+}
+
+
+.todo-container{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	min-height: 100px;
+	max-height: 1000px;
+}
+.todo-container ul{
+	width:100%;
+	padding:0 20%;
+	/*min-height: 100px;*/
+	/*display: flex;*/
+}
+
+.todo-container ul .todo{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;	
+}
+
+.todo li{
+	font-size: 12px;
+	position:relative;
+	top:0;
+	padding:4px 10px;
+	width:100%;
+	flex-wrap: wrap;
+	min-height: 30px;
+	border-radius:5px;
+	background:white;
+}
+.todo .complete-btn{
+	cursor: pointer;
+	margin:0 5px;
+	outline: none;
+	border:none;
+	height:30px;
+	width:30px;
+	border-radius:5px;
+	top:0;	
+	transition:0.3s;
+	position:relative;
+	color:blue;
+}
+.todo .trash-btn{
+	cursor: pointer;
+	outline: none;
+	border:none;
+	height:30px;
+	width:30px;
+	border-radius:5px;
+	top:0;	
+	transition:0.3s;
+	position:relative;
+	color:red;
+}
+.trash-btn:hover, .complete-btn:hover{
+	box-shadow:2px 1px 0.5px #A7A7A7;
+	top:-5px;
+	transition:0.3s;
+	position:relative;
+}
+
+.fa-trash,.fa-check{
+	pointer-events: none;
+}
+.completed{
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+.fall{
+	transition:0.5s;
+	transform: scale(0.6);
+	position:relative;
+	opacity: 0;
+}
+
+
+
+.select{
+	margin: 0 5px;
+	position: relative;
+	overflow: hidden;
+}
+.select::after {
+	content:"\25BC";
+	position:absolute;
+	background:white;
+	color:blue;
+	top:0;
+	height:40px;
+	width:0;
+	border-radius:0 5px 5px 0;
+	display: flex;
+	align-items: center;
+	right:0;
+	transition:0.2s;
+	pointer-events: none;
+}
+.select:hover::after{
+	background:blue;
+	color:white;
+	display: flex;
+	justify-content: center;
+	transition:0.2s;
+	width:20px;	
+}
+select{
+	height:40px;
+	text-align: center;
+	border-radius:5px;
+	padding:5px;
+	color:blue;
+	cursor:pointer;
+	width:4rem;
+}
+select{
+	-webkit-appearance:none;
+	-moz-appearrance:none;
+	appearance: none;
+	outline:none;
+	border:none;
+}
+
+
+
+
+/*Container*/
+.container{
+	/*width:100%;*/
+	/*min-height:calc(40vh - 50px );*/
+	/*padding:0 10%;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

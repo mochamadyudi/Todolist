@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vodonesia | Todo List</title>
+	<link rel="stylesheet" type="text/css" href="./style/app.css">
+	<link rel="shortcut icon" type="image/x-icon" href="./images/todolist.png" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navbar-center">
+			<div class="navbar-brands">
+				<div class="navbar-logo"></div>
+				<h1>Vodonesia</h1>
+			</div>
+			<div class="navbar-links">
+				<!-- <ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Profile</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact Us</a></li>
+				</ul> -->
+			</div>
+			<div class="navbar-right">
+				<!-- <button>Login</button> -->
+			</div>
+		</div>
+	</nav>
+	<header>
+		<h1>Vodonesia Todo List</h1>
+	</header>
+	<div class="container">
+		<form class="form">
+			<input type="text" name="" class="todo-input" placeholder="Masukan sesuatu...">
+			<div class="select">
+				<select class="filter-todo" name="todos">
+					<option value="all">All</option>
+					<option value="completed">Completed</option>
+					<option value="uncompleted">Uncompleted</option>
+				</select>
+			</div>
+			<button class="todo-btn" type="submit"><i class="fas fa-"></i>Submit</button>
+		</form>
+		<div class="todo-container">
+			<ul class="todo-list"></ul>
+		</div>
+	</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
